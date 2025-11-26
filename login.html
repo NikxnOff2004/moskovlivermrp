@@ -1,36 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Вход — Москва-Live</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Москва-Live - Вход</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-<div class="logo">
-<img src="assets/logo.png" alt="Москва-Live">
-<h1>Москва-Live</h1>
-</div>
-<nav>
-<a href="index.html">Главная</a>
-<a href="price.html">Прайс</a>
-<a href="profile.html" id="profile-link">Профиль</a>
-<button id="theme-toggle">🌙</button>
-</nav>
-</header>
-<main>
-<section class="auth-form">
-<h2>Вход</h2>
-<form id="login-form">
-<input type="text" id="login-email" placeholder="Email или логин" required>
-<input type="password" id="login-password" placeholder="Пароль" required>
-<button type="submit" class="btn">Войти</button>
-<p id="login-error" class="error-msg"></p>
-</form>
-</section>
-</main>
-<script src="js/main.js"></script>
-<script src="js/auth.js"></script>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Москва-Live">
+                <h1>Москва-Live</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                    <li><a href="login.html" class="active">Вход</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Тёмная тема</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-card">
+                    <h2>Вход в аккаунт</h2>
+                    <p class="login-hint">Для входа используйте ваш email или имя пользователя</p>
+                    
+                    <!-- Тестовые данные для демонстрации -->
+                    <div class="demo-accounts">
+                        <h4>Тестовые аккаунты:</h4>
+                        <p><strong>Сотрудник СМИ:</strong> admin@moskva-live.ru / admin123</p>
+                        <p><strong>Или используйте:</strong> admin / admin123</p>
+                    </div>
+                    
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="login-username">Email или имя пользователя</label>
+                            <input type="text" id="login-username" required placeholder="Введите email или имя пользователя">
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Пароль</label>
+                            <input type="password" id="login-password" required placeholder="Введите пароль">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Войти</button>
+                        </div>
+                    </form>
+                    <div id="login-error" class="error-message" style="display: none;"></div>
+                    <p>Нет аккаунта? <a href="register.html">Зарегистрируйтесь</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Москва-Live">
+                    <h3>Москва-Live</h3>
+                </div>
+                <div class="footer-links">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/moskvalive" target="_blank">Discord</a></li>
+                        <li><a href="https://t.me/moskvalive" target="_blank">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Москва-Live. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>
