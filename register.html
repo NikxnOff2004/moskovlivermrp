@@ -1,42 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Регистрация — Москва-Live</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Москва-Live - Регистрация</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-<div class="logo">
-<img src="assets/logo.png" alt="Москва-Live">
-<h1>Москва-Live</h1>
-</div>
-<nav>
-<a href="index.html">Главная</a>
-<a href="price.html">Прайс</a>
-<a href="profile.html" id="profile-link">Профиль</a>
-<button id="theme-toggle">🌙</button>
-</nav>
-</header>
-<main>
-<section class="auth-form">
-<h2>Регистрация</h2>
-<form id="register-form">
-<input type="text" id="reg-name" placeholder="Имя" required>
-<input type="text" id="reg-login" placeholder="Email или логин" required>
-<input type="password" id="reg-password" placeholder="Пароль" required>
-<input type="password" id="reg-confirm-password" placeholder="Подтвердите пароль" required>
-<select id="reg-role">
-<option value="citizen">Гражданин</option>
-<option value="staff">Сотрудник СМИ</option>
-</select>
-<button type="submit" class="btn">Зарегистрироваться</button>
-<p id="register-error" class="error-msg"></p>
-</form>
-</section>
-</main>
-<script src="js/main.js"></script>
-<script src="js/auth.js"></script>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Москва-Live">
+                <h1>Москва-Live</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="price.html">Прайс-лист</a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                    <li><a href="register.html" class="active">Регистрация</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider round"></span>
+                </label>
+                <span id="theme-label">Тёмная тема</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-section">
+            <div class="container">
+                <div class="auth-card">
+                    <h2>Регистрация</h2>
+                    <p class="login-hint">Создайте аккаунт для доступа ко всем возможностям сайта</p>
+                    
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label for="register-name">Имя и фамилия</label>
+                            <input type="text" id="register-name" required placeholder="Введите ваше имя">
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email">Email</label>
+                            <input type="email" id="register-email" required placeholder="example@mail.ru">
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password">Пароль</label>
+                            <input type="password" id="register-password" required placeholder="Не менее 6 символов">
+                        </div>
+                        <div class="form-group">
+                            <label for="register-confirm">Подтверждение пароля</label>
+                            <input type="password" id="register-confirm" required placeholder="Повторите пароль">
+                        </div>
+                        <div class="form-group">
+                            <label for="register-role">Роль</label>
+                            <select id="register-role">
+                                <option value="citizen">Гражданин</option>
+                                <option value="employee">Сотрудник СМИ</option>
+                            </select>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">Зарегистрироваться</button>
+                        </div>
+                    </form>
+                    <div id="register-error" class="error-message" style="display: none;"></div>
+                    <p>Уже есть аккаунт? <a href="login.html">Войдите</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Москва-Live">
+                    <h3>Москва-Live</h3>
+                </div>
+                <div class="footer-links">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><a href="https://discord.gg/moskvalive" target="_blank">Discord</a></li>
+                        <li><a href="https://t.me/moskvalive" target="_blank">Telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Москва-Live. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>
