@@ -189,12 +189,9 @@ function getPriceList() {
         } else {
             // Инициализация прайс-листа по умолчанию
             const defaultPriceList = [
-                { id: 1, service: "Размещение поста", description: "Публикация новостного поста на главной странице", price: 50 },
-                { id: 2, service: "Рекламная статья", description: "Размещение рекламной статьи с выделенным оформлением", price: 100 },
-                { id: 3, service: "Интервью", description: "Проведение и публикация интервью с участником", price: 150 },
-                { id: 4, service: "Баннер на сайте", description: "Размещение рекламного баннера на сайте на 7 дней", price: 200 },
-                { id: 5, service: "Спецрепортаж", description: "Подготовка и публикация специального репортажа", price: 120 },
-                { id: 6, service: "Фотоотчет", description: "Публикация фотоотчета с события", price: 80 }
+                { id: 2, service: "Рекламная статья", description: "Размещение рекламной статьи с выделенным оформлением", price: 1.000.000 },
+                { id: 3, service: "Интервью", description: "Проведение и публикация интервью с участником", price: 300.000 },
+                { id: 6, service: "Журнал", description: "Создание эксклюзивного журнала", price: 3.000.000 }
             ];
             savePriceList(defaultPriceList);
             return defaultPriceList;
